@@ -1,0 +1,120 @@
+index.html
+!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GLOVINISI - Official</title>
+  <style>
+    :root { --accent: #0ea5a4; --bg: #f7fbff; --card: #fff; --muted: #666; }
+    * { box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; margin: 0; background: var(--bg); color: #111; }
+    header { background: linear-gradient(90deg, #e6f8f8, #ffffff); padding: 18px 20px; display: flex; align-items: center; justify-content: space-between; }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .logo { width: 42px; height: 42px; border-radius: 6px; background: var(--accent); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; }
+    nav a { margin-left: 14px; color: #0b7285; text-decoration: none; font-weight: 600; }
+    .hero { display: flex; flex-wrap: wrap; gap: 20px; padding: 28px 20px; align-items: center; }
+    .hero .left { flex: 1; min-width: 260px; }
+    .hero h1 { margin: 0; font-size: 28px; color: #064b4b; }
+    .cta { margin-top: 12px; }
+    .shop-btn { background: var(--accent); color: white; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 700; }
+    .hero .right { flex: 1; min-width: 260px; display: flex; justify-content: center; }
+    .promo-card { background: var(--card); padding: 14px; border-radius: 12px; box-shadow: 0 6px 18px rgba(10,10,10,0.06); max-width: 420px; width: 100%; }
+    .features { display: flex; gap: 12px; padding: 18px 20px; flex-wrap: wrap; }
+    .feature { background: var(--card); padding: 14px; border-radius: 10px; flex: 1; min-width: 160px; text-align: center; }
+    .catalog { padding: 20px; }
+    .catalog h2 { margin-top: 0; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px,1fr)); gap: 14px; }
+    .product { background: var(--card); padding: 12px; border-radius: 10px; box-shadow: 0 6px 14px rgba(10,10,10,0.04); display: flex; flex-direction: column; }
+    .product img { width: 100%; height: 160px; object-fit: contain; border-radius: 6px; background: #fff; }
+    .p-title { font-weight: 700; margin: 8px 0 4px; font-size: 14px; }
+    .p-price { color: var(--accent); font-weight: 800; }
+    .p-meta { color: var(--muted); font-size: 13px; }
+    footer { padding: 18px 20px; text-align: center; color: var(--muted); }
+    .muted { color: var(--muted); }
+    @media (min-width: 900px) { .hero h1 { font-size: 36px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">G</div>
+      <div>
+        <div style="font-weight:800">GLOVINISI</div>
+        <div class="muted" style="font-size:12px">Official Online Store</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#catalog">Produk</a>
+      <a href="#about">Tentang</a>
+      <a href="#contact">Kontak</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="left">
+      <h1>GLOVINISI — Koleksi Sepatu &amp; Aksesori Terbaru</h1>
+      <p class="muted">Kualitas premium, jaminan original, pengiriman cepat ke seluruh Indonesia.</p>
+      <div class="cta"><a class="shop-btn" href="#catalog">Lihat Produk</a></div>
+    </div>
+    <div class="right">
+      <div class="promo-card">
+        <img src="https://via.placeholder.com/400x200?text=Promo+GLOVINISI" alt="Promo GLOVINISI" style="width:100%;border-radius:8px" />
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature"><strong>Garansi Original</strong><div class="muted">Produk original dan bergaransi</div></div>
+    <div class="feature"><strong>Pelayanan 24/7</strong><div class="muted">CS siap membantu</div></div>
+    <div class="feature"><strong>Pengiriman Cepat</strong><div class="muted">Partner kurir terpercaya</div></div>
+  </section>
+
+  <main class="catalog" id="catalog">
+    <h2>Produk dari Toko Shopee GLOVINISI</h2>
+    <div class="grid" id="productGrid">
+      <!-- Di sini akan tampil produk dari Shopee -->
+    </div>
+    <p style="margin-top:16px;color:var(--muted);font-size:13px">Produk dari toko Shopee GLOVINISI.</p>
+  </main>
+
+  <section id="about" style="padding:20px;">
+    <h3>Tentang GLOVINISI</h3>
+    <p class="muted">GLOVINISI hadir dengan produk sepatu dan aksesori berkualitas dari toko Shopee resmi kami.</p>
+  </section>
+
+  <section id="contact" style="padding:20px">
+    <h3>Kontak</h3>
+    <p class="muted">Alamat: (Isi alamat toko Anda)</p>
+    <p class="muted">Email: cs@glovinisi.com</p>
+  </section>
+
+  <footer>
+    © <span id="year"></span> GLOVINISI — All Rights Reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Contoh data produk (ubah nanti dengan data Shopee)
+    const products = [
+      { title: 'Contoh Sepatu 1', price: 'Rp 200.000', img: 'https://via.placeholder.com/200', link: 'https://shopee.co.id' },
+      { title: 'Contoh Sepatu 2', price: 'Rp 250.000', img: 'https://via.placeholder.com/200', link: 'https://shopee.co.id' },
+      { title: 'Contoh Aksesori', price: 'Rp 120.000', img: 'https://via.placeholder.com/200', link: 'https://shopee.co.id' }
+    ];
+
+    const grid = document.getElementById('productGrid');
+    products.forEach(p => {
+      const card = document.createElement('div');
+      card.className = 'product';
+      card.innerHTML = `
+        <img src="${p.img}" alt="${p.title}">
+        <div class="p-title">${p.title}</div>
+        <div class="p-price">${p.price}</div>
+        <div style="margin-top:8px"><a href="${p.link}" class="shop-btn">Beli</a></div>
+      `;
+      grid.appendChild(card);
+    });
+  </script>
+</body>
+</html>
